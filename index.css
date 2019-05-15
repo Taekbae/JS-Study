@@ -1,0 +1,117 @@
+@import "reset.css";
+
+body {
+  background-color: #323232;
+}
+
+.centered {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+  font-family: "Fira Sans";
+}
+
+.js-clock {
+  margin-top: 50px;
+  font-size: 90px;
+  font-weight: 600;
+}
+
+.js-greetings {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 25px;
+}
+
+.js-weather {
+  margin-bottom: 100px;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.js-inputToDo {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  background: #f7f7f7;
+  font-size: 10px;
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.js-inputToDo[type="text"] {
+  font-family: "Fira Sans";
+  color: #4c4c4c;
+}
+
+.js-inputToDo::placeholder {
+  font-family: "Fira Sans", "Noto Sans KR";
+  font-weight: 300;
+}
+
+.js-inputToDo:focus {
+  outline: none;
+}
+
+.js-inputToDo:focus::placeholder {
+  color: transparent;
+}
+
+.js-toDoList li {
+  margin-bottom: 5px;
+  font-family: "Fira Sans", "Noto Sans KR";
+  font-weight: 300;
+  font-size: 12px;
+}
+
+button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-size: 10px;
+}
+
+.form,
+.grettings {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.bgImage {
+  position: fixed;
+  margin: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background-size: contain;
+  animation: fadeIn 0.5s linear;
+  object-fit: cover;
+  z-index: -1;
+}
